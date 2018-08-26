@@ -1,0 +1,4 @@
+name: BungeeVote
+main: com.vexsoftware.votifier.Votifier
+version: 1.0-SNAPSHOT
+author: "johnnywoof, FrankHeijden"
