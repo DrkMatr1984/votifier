@@ -15,16 +15,17 @@ A vote listener implements the `VoteListener` interface which contains an implem
 A basic vote listener looks something like this:
 
     public class BungeeListener extends Plugin implements Listener {
-    public void onEnable() {
-        this.getProxy().getPluginManager().registerListener(this, this);
-    }
+    
+        public void onEnable() {
+            this.getProxy().getPluginManager().registerListener(this, this);
+        }
 
-    @Subscribe
-    public void onPlayerVote(VotifierEvent event) {
-        Vote vote = event.getVote();
-        ProxyServer.getInstance().getPlayer(vote.getUsername()).sendMessage("I saw you voted. Thank you. :3");
+        @Subscribe
+        public void onPlayerVote(VotifierEvent event) {
+            Vote vote = event.getVote();
+            ProxyServer.getInstance().getPlayer(vote.getUsername()).sendMessage("I saw you voted. Thank you. :3");
+        }
     }
-}
 
 ## Compiling Vote Listeners
 
